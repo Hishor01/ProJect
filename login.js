@@ -90,7 +90,7 @@ const logIn = () => {
             toast('Log in successful😁', '#006400', '#fff')
             sub.innerHTML = '...loading'
             setTimeout(() => {
-                sub.innerHTML = 'Submit'
+                sub.innerHTML = 'dashboard.html'
             }, 1000)
             localStorage.setItem("loggedIn", "true"); 
             
