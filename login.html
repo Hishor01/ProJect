@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://img.icons8.com/?size=100&id=8301&format=png&color=000000">
+    <title>Log in your Account</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+
+<body>
+    
+    <section>
+    <div class="login-box">
+        <form action="">
+            <h2>Login</h2>
+            <div class="input-box">
+                <!-- <span class="icon"></span> -->
+                <input type="email" id="email" required>
+                <label for="Email">Email</label>
+            </div>
+            <div class="input-box">
+                <div class="btnbox">
+                <!-- <span class="icon"></span> -->
+                <input type="password" id="password"required>
+                <label for="Password">Password</label>
+                <button class="toggle" id="toggle-password" type="button">Show</button>
+            </div>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox">Remember me</label>
+                <a href="#">Forgot Password</a>
+            </div>
+            <button type="submit" onclick="logIn()">Login</button>
+            <div class="register-link">
+                <p>
+                    Don't have an account? <a href="signup.html">Register</a>
+                </p></div>
+                <h3>or Login with social platforms</h3>
+                <div class="social-icons">
+                    <!-- <a href="#" class="fa fa-facebook"><img src="image/icons8-facebook.svg" alt=""></a> -->
+                <a href="#" class="  fa-github" ><img src="https://img.icons8.com/?size=100&id=efFfwotdkiU5&format=png&color=000000" alt=""></a>
+                <a href="#" class="fa fa-google" aria-hidden="true"><img src="https://img.icons8.com/?size=100&id=17949&format=png&color=000000" alt=""></a>
+                </div>
+
+                <!-- <i class="fa fa-github" aria-hidden="true"></i> -->
+        </form>
+    </div>
+</section>
+
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'sans-serif'; */
+}
+/* body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+} */
+h3{
+    text-align: center;
+    color : #fff;
+    margin-bottom: 3px;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    /* background: linear-gradient(to Right, gold,royalblue); */
+        background: url(image/pexels-bertellifotografia-9128851.jpg);
+    background-size: cover;
+    background-position: center;
+    animation: animateBg 10s linear infinite;
+}
+
+@keyframes animateBg{
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+.login-box{
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background: #00000069;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(15px);
+    animation: animateBox 1s linear alternate;
+}
+
+@keyframes animateBox{
+    0%{
+        transform: translateY(-10%);
+    }
+    100%{
+        transform: translateY(1%);
+    }
+}
+@media screen and (max-width:360px) {
+    @keyframes animateBox{
+        0%{
+            transform: none;
+        }
+        100%{
+            transform: none;
+        }
+    }
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    /* width: 10px; */
+}
+
+.social-icons img{
+    width: 40px;
+}
+.social-icons a{
+    display: inline-flex;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+    margin: 0 8px;
+}
+.toggle{
+    /* width: 20%; */
+    background: transparent;
+    justify-items: end;
+}
+.btnbox{
+    display: flex;
+}
+
+
+h2{
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+}
+
+.input-box{
+    position: relative;
+    width: 310px;
+    margin: 30px 0;
+    border-bottom: 2px solid #fff;
+}
+
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    /* transform: translateY(-50%); */
+    font-size: 1em;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px;
+}
+.input-box input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #fff;
+    padding: 0 35px 0 5px;
+}
+.input-box .icon {
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 57px;
+} 
+
+.remember-forgot{
+    margin: -15px 0 15px;
+    font-size: .9em;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+.remember-forgot label input {
+    margin-right: 3px;
+}
+.remember-forgot a{
+    color: #fff;
+    text-decoration: none;
+}
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+button{
+    width: 100%;
+    height: 40px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #000;
+    font-weight: 500;
+}
+
+.register-link{
+    font-size: .9em;
+    color: #fff;
+    text-align: center;
+    margin: 25px 0 10px ;
+}
+
+.register-link p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link p a:hover{
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 360px) {
+    .login-box{
+        width: 100%;
+        height: 100vh;
+        border: none;
+        border-radius: 0;
+    }
+    .input-box{
+        width: 290px;
+    }
+}
+</style>
+</body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+<script src="login.js"></script>
+</html>

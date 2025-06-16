@@ -1,0 +1,161 @@
+/* body {
+            display: flex;
+            margin: 0;
+            background: #f1f3f4;
+            } */
+            .sidebar {
+            min-height: 95vh;
+            width: 220px;
+            background: #fff;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+            padding: 30px 0 0 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .sidebar h3 {
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #5f6368;
+        }
+        .sidebar main a {
+            display: block;
+            padding: 15px 30px;
+            color: #5f6368;
+            text-decoration: none;
+            font-weight: 500;
+            border-left: 4px solid transparent;
+            transition: background 0.2s, border 0.2s;
+        }
+        .sidebar main a.active, .sidebar main a:hover {
+            background: #f1f3f4;
+            border-left: 4px solid #4285f4;
+            color: #4285f4;
+        }
+        .main-content {
+            flex: 1;
+            padding: 40px 60px;
+            display: flex;
+            flex-direction: column;
+        }
+        #noteContent{
+            resize:none;
+            overflow: hidden;
+        transition: height 0.2s;
+        }
+        .note-input {
+            resize: none;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 1px 4px rgba(60,64,67,.15);
+            padding: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .notes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .note {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 1px 4px rgba(60,64,67,.15);
+            padding: 18px 16px;
+            min-height: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            /* resize: none; */
+        }
+        .note-title {
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        .note-content {
+            color: #5f6368;
+        }
+        .note-footer {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .note-footer button {
+            background: none;
+            border: none;
+            color: #4285f4;
+            cursor: pointer;
+        }
+        .idebar {
+            min-height: 10vh;
+            width: 220px;
+            background: #fff;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+            padding: 30px 0 0 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .idebar h3 {
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #5f6368;
+        }
+        .idebar main a {
+            display: block;
+            padding: 15px 30px;
+            color: #5f6368;
+            text-decoration: none;
+            font-weight: 500;
+            border-left: 4px solid transparent;
+            transition: background 0.2s, border 0.2s;
+        }
+        .idebar main a.active, .idebar main a:hover {
+            background: #f1f3f4;
+            border-left: 4px solid #4285f4;
+            color: #4285f4;
+        }
+
+        @media (max-width: 991.98px) {
+            .sidebar {
+                display: none !important;
+            }
+            .main-content {
+                padding: 20px 5vw;
+            }
+            
+        }
+        #mobileDashboardMenu {
+            transform: scale(0.95);
+            opacity: 0;
+            transition: transform 0.25s cubic-bezier(.4,0,.2,1), opacity 0.25s cubic-bezier(.4,0,.2,1);
+            transform-origin: top right;
+        }
+        #mobileDashboardMenu.show-scale {
+            transform: scale(1);
+            position: fixed;
+            opacity: 1;
+        }
+        
+        
+        @media (min-width: 992px) {
+            .navbar {
+                display: none !important;
+            }
+        }
+
+        /* @media screen and(max-width:600px) {
+            .sect{
+                flex-direction:column ;
+                flex-wrap: nowrap;
+            }
+            .sidebar {
+            min-height: 15vh;
+            width: 100%;
+            background: #fff;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+            /* padding: 30px 0 0 0; */
+            
