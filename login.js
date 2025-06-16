@@ -54,10 +54,10 @@ const logIn = () => {
         toast('Input valid email & password please')
         return;
     }
-    //else if (!email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)){
-       // toast('Input your valid email')
-        //return;
-    //}
+    else if (!email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)){
+    toast('Input your valid email')
+        return;
+    }
     else if (password === ''){
         toast('Input your valid password')
         toggleBtn.textContent = 'hide'
@@ -81,16 +81,19 @@ const logIn = () => {
         //     document.getElementById("password").value.trim()
             
             
+
         else if (storedUserObj){
-            
-            
             allUsers.push(storedUserObj && storedUserObj === email && storedUserObj && storedUserObj === password)
             console.log(storedUserObj);
+
+            const sub = document.getElementById('sub')
+            sub.innerHTML = 'Logging in...'
+
             
             toast('Log in successful😁', '#006400', '#fff')
             sub.innerHTML = '...loading'
             setTimeout(() => {
-                sub.innerHTML = 'dashboard.html'
+                sub.innerHTML = 'Submit'
             }, 1000)
             localStorage.setItem("loggedIn", "true"); 
             
@@ -103,3 +106,10 @@ const logIn = () => {
             }, 2000)
 }
 }
+
+// else {
+//         toast('Invalid credentials, please try again', '#f00', '#fff')
+//     }
+
+
+
